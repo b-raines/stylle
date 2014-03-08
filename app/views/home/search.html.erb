@@ -1,0 +1,10 @@
+<h1 class="station"><%= @search %></h1>
+<div class="stream">
+  <% @shoes.each do |shoe| %>
+    <div class="shoes">
+      <img class="shoe-pic" src=<%= shoe["image"]["sizes"]["Large"]["url"] %> >
+      <button class="button like" type="button" value="like">like</button>
+      <button class="button dislike" type="button" value="dislike">dislike</button>
+    </div>
+  <% end %>
+</div>
