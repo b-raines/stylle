@@ -1,32 +1,78 @@
 .container
-  margin-left: 25px
-  margin-right: 25px
+  position: relative
+  top: 60px
 
 .search
-  margin: 50px auto
+  margin: 40px auto
   width: 280px
 
-.title
+.search-submit
+  display: block
+  margin: 0 auto
+
+header
   border-bottom: 1px solid #ddd
-  text-align: center
+  background-color: white
+  position: fixed
+  width: 100%
+  margin: 0
+  top: 0
+  z-index: 9999
+
+.title
+  margin-left: 20px
 
 .station
+  position: absolute
+  top: 13px
+  right: 10px
+  color: #777
   text-align: center
 
 .stream
   margin: 0 auto
-  width: 320px
 
-.shoes
+.shoe
+  position: relative
+  height: 420px
+  padding: 10px 20px
   border-bottom: 1px solid #ddd
 
 .shoe-pic
+  max-height: 300px
   display: block
   margin: 20px auto
 
-.button
-  margin: 10px
+.button-container
+  width: 100%
+  position: absolute
+  bottom: 0
+
+.like, .dislike
+  text-align: center
+  margin: 15px 20px
+
+.like
+  left: -20px
+
+.like-active
+  background-color: green
 
 .dislike
+  right: 20px
   float: right
 
+.improving
+  z-index: 999
+  height: 80px
+  width: 200px
+  border: 1px solid #ccc
+  background-color: rgba(white, 0.9)
+  display: none
+  position: fixed
+  top: 120px
+  left: 60px
+  p
+    position: relative
+    top: 25px
+    text-align: center

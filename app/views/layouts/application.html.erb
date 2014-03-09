@@ -4,12 +4,19 @@
   <title>Stylle</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div class="container">
+<header>
   <h1 class="title">Stylle</h1>
+  <% unless @search.nil? %>
+    <h4 class="station"><%= @search %></h4>
+  <% end %>
+</header>
+
+<div class="container">
   <%= yield %>
 </div>
 

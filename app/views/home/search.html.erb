@@ -1,10 +1,17 @@
-<h2 class="station"><%= @search %></h2>
+<div class="improving">
+  <p>Improved search!</p>
+</div>
+
 <div class="stream">
   <% @shoes.each do |shoe| %>
-    <div class="shoes">
-      <img class="shoe-pic" src=<%= shoe["image"]["sizes"]["Large"]["url"] %> >
-      <button class="button like" type="button" value="like">like</button>
-      <button class="button dislike" type="button" value="dislike">dislike</button>
+    <div class="shoe">
+      <a href=<%= shoe["clickUrl"] %> target="_blank">
+        <img class="shoe-pic" src=<%= shoe["image"]["sizes"]["IPhone"]["url"] %> >
+      </a>
+      <div class="button-container">
+        <button class="button like" type="button" value="like">like</button>
+        <button class="button dislike" type="button" value="dislike">dislike</button>
+      </div>
     </div>
   <% end %>
 </div>
