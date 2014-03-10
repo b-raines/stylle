@@ -11,7 +11,7 @@
 <body>
 
 <header>
-  <h1 class="title">Stylle</h1>
+  <h1 class="title"><%= link_to('Stylle', root_path) %></h1>
   <% unless @search.nil? %>
     <h4 class="station"><%= @search %></h4>
   <% end %>
