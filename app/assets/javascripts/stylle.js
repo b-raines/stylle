@@ -5,7 +5,7 @@ $(document).ready( function() {
 		$this = $(this);
 		var top = $(window).scrollTop();
 		var shoeHeight = $('.shoe').outerHeight();
-		var src = '/assets/thumbs_up_color.png';
+		var src = $('#thumb-up').attr('src');
 		$this.attr('src', src);
 		$('.improving').fadeIn(setTimeout(function() {
 			$('.improving').fadeOut(function() {
@@ -24,7 +24,7 @@ $(document).ready( function() {
 	$('.thumbs-down').click(function(event) {
 		event.preventDefault();
 		$this = $(this);
-		var src = '/assets/thumbs_down_color.png';
+		var src = $('#thumb-down').attr('src');
 		$this.attr('src', src);
 		$('.improving').fadeIn(setTimeout(function() {
 			$('.improving').fadeOut(function() {
