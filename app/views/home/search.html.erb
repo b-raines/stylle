@@ -9,8 +9,8 @@
         <img class="shoe-pic" src=<%= shoe["image"]["sizes"]["IPhone"]["url"] %> >
       </a>
       <div class="button-container">
-        <a href="#" class="thumbs" data-no-turbolink><%= image_tag('thumbs_up.png', alt: 'thumbs up', class: "thumbs-up") %></a>
-        <a href="#" class="thumbs" data-no-turbolink><%= image_tag('thumbs_down.png', alt: 'thumbs down', class: "thumbs-down") %></a>
+        <div class="thumbs" data-no-turbolink><%= image_tag('thumbs_up.png', alt: 'thumbs up', class: "thumbs-up") %></div>
+        <div class="thumbs" data-no-turbolink><%= image_tag('thumbs_down.png', alt: 'thumbs down', class: "thumbs-down") %></div>
       </div>
     </div>
   <% end %>
