@@ -1,6 +1,6 @@
 $(document).ready( function() {
 
-	$('.like').click(function(event) {
+	$('.thumbs-up').click(function(event) {
 		event.preventDefault();
 		$this = $(this);
 		var top = $(window).scrollTop();
@@ -19,7 +19,7 @@ $(document).ready( function() {
 		}, 2000));
 	});
 
-	$('.dislike').click(function(event) {
+	$('.thumbs-down').click(function(event) {
 		event.preventDefault();
 		$this = $(this);
 		$('.improving').fadeIn(setTimeout(function() {
