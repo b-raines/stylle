@@ -1,6 +1,7 @@
 $(document).ready( function() {
 
-	$('.like').click(function() {
+	$('.like').click(function(event) {
+		event.preventDefault();
 		$this = $(this);
 		var top = $(window).scrollTop();
 		var shoeHeight = $('.shoe').outerHeight();
@@ -18,7 +19,8 @@ $(document).ready( function() {
 		}, 2000));
 	});
 
-	$('.dislike').click(function() {
+	$('.dislike').click(function(event) {
+		event.preventDefault();
 		$this = $(this);
 		$('.improving').fadeIn(setTimeout(function() {
 			$('.improving').fadeOut(function() {
