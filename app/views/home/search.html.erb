@@ -9,8 +9,8 @@
         <img class="shoe-pic" src=<%= shoe["image"]["sizes"]["IPhone"]["url"] %> >
       </a>
       <div class="button-container">
-        <button class="button like" type="button" value="like">like</button>
-        <button class="button dislike" type="button" value="dislike">dislike</button>
+        <a href="#" class="like"><%= image_tag('thumbs_up.png', alt: 'thumbs up') %></a>
+        <a href="#" class="dislike"><%= image_tag('thumbs_down.png', alt: 'thumbs down') %></a>
       </div>
     </div>
   <% end %>
