@@ -5,6 +5,14 @@
 <%= image_tag('thumbs_up_color.png', id: 'thumb-up') %>
 <%= image_tag('thumbs_down_color.png', id: 'thumb-down') %>
 
+<div class="history">
+  <ul>
+    <% @searches.each do |search| %>
+        <li><%= link_to search,{ controller: 'home', action: 'search', search: search } %></li>
+    <% end %>
+  </ul>
+</div>
+
 <div class="stream">
   <% @shoes.each do |shoe| %>
     <div class="shoe">
