@@ -15,7 +15,7 @@
     <% end %>
     <ul>
       <% @searches.each do |search| %>
-          <li><%= link_to search,{ controller: 'home', action: 'search', search: search, email: @email } %></li>
+            <li><%= link_to 'x', user_search_path(@user, search), method: :delete, remote: true, class: 'close' %><%= link_to search.query,{ controller: 'home', action: 'search', search: search.query, email: @email } %></li>
       <% end %>
     </ul>
   </div>
