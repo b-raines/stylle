@@ -10,12 +10,14 @@ class HomeController < ApplicationController
     @shoes = JSON.parse(Net::HTTP.get(uri))
     @shoes = @shoes["products"]
     @email = params[:email]
-    user = User.find_by(email: @email)
-    if user.nil?
-      user = User.create(email: @email, searches: [ @search ])
-    else
-      user.add_search(@search)
+    if @email.present?
+      user = User.find_by(email: @email)
+      if user.nil?
+        user = User.create(email: @email, searches: [ @search ])
+      else
+        user.add_search(@search)
+      end
+      @searches = user.searches
     end
-    @searches = user.searches
   end
 end
